@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NavBar from './components/NavBar';
+import SocialLink from './components/SocialLink.js';
 import './style/App.css';
 
 class App extends Component {
@@ -7,6 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
+        <SocialLink />
       </div>
     );
   }

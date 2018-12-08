@@ -1,0 +1,8 @@
+.email-link {
+  color: #000;
+  font-size: 18px;
+  text-decoration: none;
+  font-family: 'Lato';
+  opacity: 0.5;
+  -webkit-transition: opacity 0.1s ease-in;
+}
