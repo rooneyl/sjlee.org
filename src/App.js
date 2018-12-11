@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import NavBar from './components/NavBar';
-import SocialLink from './components/SocialLink.js';
+import SocialLink from './components/SocialLink';
 import './style/App.css';
 
 class App extends Component {
