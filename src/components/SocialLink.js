@@ -14,7 +14,7 @@ class SocialLink extends Component {
     return (
       <div className="SocialLink">
         <div className="social-icons">
-          <IconButton href="http://www.naver.com">
+          <IconButton href="https://github.com/rooneyl" target="_blank">
             <IconContext.Provider value={{ size: '1.2em' }}>
               <FaGithub />
             </IconContext.Provider>
@@ -24,7 +24,7 @@ class SocialLink extends Component {
               <FaLinkedin />
             </IconContext.Provider>
           </IconButton>
-          <IconButton>
+          <IconButton href="https://rooneyl.github.io/AboutMe/resume.pdf" target="_blank">
             <IconContext.Provider value={{ size: '1.2em' }}>
               <FaRegFilePdf />
             </IconContext.Provider>
