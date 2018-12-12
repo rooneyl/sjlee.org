@@ -4,7 +4,18 @@
   right: 0;
   bottom: 0;
   left: 0;
-  text-align: center;
   background-image: url('../image/background.png');
   background-repeat: repeat;
+  background-size: 40%;
+  background-position: center;
+  color: #555;
+  text-align: center;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
