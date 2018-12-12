@@ -1,45 +1,35 @@
-import React, { Component } from 'react';
+import React from 'react';
 import IconButton from '@material-ui/core/IconButton';
-import Button from '@material-ui/core/Button';
 import { FaGithub, FaRegFilePdf, FaLinkedin } from 'react-icons/fa';
 import { IconContext } from 'react-icons';
 import '../style/SocialLink.css';
 
-class SocialLink extends Component {
-  console = () => {
-    console.log('must open');
-  };
+const getButton = (Icon, link) => {
+  const iconSize = { size: '1.2em' };
+  return (
+    <div className="external-link">
+      <IconButton href={link} target="_blank">
+        <IconContext.Provider value={iconSize}>{new Icon()}</IconContext.Provider>
+      </IconButton>
+    </div>
+  );
+};
 
-  render() {
-    return (
-      <div className="SocialLink">
-        <div className="social-icons">
-          <IconButton href="https://github.com/rooneyl" target="_blank">
-            <IconContext.Provider value={{ size: '1.2em' }}>
-              <FaGithub />
-            </IconContext.Provider>
-          </IconButton>
-          <IconButton>
-            <IconContext.Provider value={{ size: '1.2em' }}>
-              <FaLinkedin />
-            </IconContext.Provider>
-          </IconButton>
-          <IconButton href="https://rooneyl.github.io/AboutMe/resume.pdf" target="_blank">
-            <IconContext.Provider value={{ size: '1.2em' }}>
-              <FaRegFilePdf />
-            </IconContext.Provider>
-          </IconButton>
-        </div>
-        <div>
-          <Button>
-            <a className="email-link" href="mailto:hello@sjlee.org">
-              hello@sjlee.org
-            </a>
-          </Button>
-        </div>
-      </div>
-    );
-  }
-}
+const getEmailLink = email => (
+  <a className="email-link" href={`mailto:${email}`}>
+    {email}
+  </a>
+);
+
+const SocialLink = () => (
+  <div className="SocialLink">
+    <div>
+      {getButton(FaGithub, 'https://www.github.com/rooneyl')}
+      {getButton(FaLinkedin, 'https://www.linkedin.com/in/seongjun-lee-649598101')}
+      {getButton(FaRegFilePdf, 'https://rooneyl.github.io/AboutMe/resume.pdf')}
+    </div>
+    {getEmailLink('hello@sjlee.org')}
+  </div>
+);
 
 export default SocialLink;
